@@ -7,41 +7,53 @@ import java.util.List;
  * Created by yangr on 2/27/2016.
  */
 public interface IPost {
-    public IUser getOwner();
+    IUser getOwner();
 
 
-    public void setOwner(IUser owner);
+    void setOwner(IUser owner);
 
 
-    public String getSubject();
+    String getDescription();
 
 
-    public void setSubject(String subject);
+    void setDescription(String subject);
 
 
-    public double getReward();
+    double getReward();
 
-    public void setReward(double reward);
-
-
-
-    public Date getPostingTime();
-
-
-    public void setPostingTime(Date postingTime);
-
-
-    public List<IReply> getReplies();
-
-
-    public void setReplies(List<IReply> replies);
-
-
-    public IUser getSeller();
-
-    public void setSeller(IUser seller);
+    void setReward(double reward);
 
 
 
+    Date getPostingTime();
+
+
+    void setPostingTime(Date postingTime);
+
+
+    List<IReply> getReplies();
+
+
+    void setReplies(List<IReply> replies);
+
+
+    IUser getSeller();
+
+    void setSeller(IUser seller);
+
+    String getStatus();
+    void setStatus(String status);
+
+    public double getLongitude();
+
+    public void setLongitude(double longitude);
+
+    public double getLatitude();
+
+    public void setLatitude(double latitude);
+
+    public String getTitle();
+
+    public void setTitle(String title);
 
 }

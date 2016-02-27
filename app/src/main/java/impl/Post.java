@@ -12,8 +12,12 @@ import framework.IUser;
  */
 public class Post implements IPost {
     private final int EXPIRATION_TIME = 3600; // in seconds which is 1 hour
+    private String status;
     private IUser owner;
-    private String subject;
+    private String title;
+    private double latitude;
+    private double longitude;
+    private String description;
     private double reward;
     private Date postingTime;
     private List<IReply> replies;
@@ -26,6 +30,38 @@ public class Post implements IPost {
 
     }
 
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public IUser getOwner() {
         return owner;
     }
@@ -34,12 +70,12 @@ public class Post implements IPost {
         this.owner = owner;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getDescription() {
+        return description;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public double getReward() {
