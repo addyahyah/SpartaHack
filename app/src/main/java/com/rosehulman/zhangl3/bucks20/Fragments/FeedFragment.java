@@ -12,15 +12,15 @@ import com.rosehulman.zhangl3.bucks20.R;
 /**
  * Created by zhangl3 on 2/27/2016.
  */
-public class PageFragment extends Fragment{
+public class FeedFragment extends Fragment{
     public static final String ARG_PAGE = "ARG_PAGE";
 
     private int mPage;
 
-    public static PageFragment newInstance(int page) {
+    public static FeedFragment newInstance(int page) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        PageFragment fragment = new PageFragment();
+        FeedFragment fragment = new FeedFragment();
         fragment.setArguments(args);
         return fragment;
     }
@@ -34,7 +34,7 @@ public class PageFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab, container, false);
         TextView textView = (TextView) view;
         textView.setText("Fragment #" + mPage);
         return view;

@@ -5,17 +5,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.rosehulman.zhangl3.bucks20.Fragments.PageFragment;
+import com.rosehulman.zhangl3.bucks20.Fragments.FeedFragment;
 
 /**
  * Created by zhangl3 on 2/27/2016.
  */
-public class PageAdapter extends FragmentPagerAdapter {
+public class NotificationFragmentAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 3;
     private String tabTitles[] = new String[] { "Feed", "Profile", "Notification" };
     private Context context;
 
-    public PageAdapter(FragmentManager fm, Context context) {
+    public NotificationFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
 
@@ -23,7 +23,7 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return PageFragment.newInstance(position + 1);
+        return FeedFragment.newInstance(position + 1);
     }
 
     @Override

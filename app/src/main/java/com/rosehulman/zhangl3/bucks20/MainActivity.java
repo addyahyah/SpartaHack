@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.rosehulman.zhangl3.bucks20.Adapters.PageAdapter;
+import com.rosehulman.zhangl3.bucks20.Adapters.TabFragmentAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
      * may be best to switch to a
      * {@link android.support.v4.app.FragmentStatePagerAdapter}.
      */
-    private PageAdapter mPagerAdapter;
+    private TabFragmentAdapter mPagerAdapter;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mPagerAdapter = new PageAdapter(getSupportFragmentManager(), MainActivity.this);
+        mPagerAdapter = new TabFragmentAdapter(getSupportFragmentManager(), MainActivity.this);
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
