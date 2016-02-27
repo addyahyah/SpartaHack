@@ -5,6 +5,7 @@ import framework.IRating;
 /**
  * Created by yangr on 2/27/2016.
  */
+
 public class Rating implements IRating {
     private double totalScores;
     private int totalNumOfPosts;
