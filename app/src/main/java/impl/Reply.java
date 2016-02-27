@@ -32,4 +32,23 @@ public class Reply implements IReply {
     public Date getTime() {
         return time;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Reply reply = (Reply) o;
+
+        if (!ownerId.equals(reply.ownerId)) return false;
+        return time.equals(reply.time);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = ownerId.hashCode();
+        result = 31 * result + time.hashCode();
+        return result;
+    }
 }

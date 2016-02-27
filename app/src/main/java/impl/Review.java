@@ -49,4 +49,25 @@ public class Review implements IReview {
     public String setContend() {
         return contend;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Review review = (Review) o;
+
+        if (!ownerId.equals(review.ownerId)) return false;
+        if (!postId.equals(review.postId)) return false;
+        return date.equals(review.date);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = ownerId.hashCode();
+        result = 31 * result + postId.hashCode();
+        result = 31 * result + date.hashCode();
+        return result;
+    }
 }

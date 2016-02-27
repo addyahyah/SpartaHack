@@ -2,6 +2,7 @@ package impl;
 
 import java.util.List;
 
+import framework.IRating;
 import framework.IReview;
 import framework.IUser;
 
@@ -16,7 +17,7 @@ public class User implements IUser {
     private String gender;
     private List<String> postsOwned;
     private List<IReview> reviews;
-    private Rating Rating;
+    private IRating Rating;
     private List<String> postListening;
 
     public User(){

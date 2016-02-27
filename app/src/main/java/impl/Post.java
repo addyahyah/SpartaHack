@@ -73,4 +73,23 @@ public class Post implements IPost {
     public void setSeller(IUser seller) {
         this.seller = seller;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Post post = (Post) o;
+
+        if (!owner.equals(post.owner)) return false;
+        return postingTime.equals(post.postingTime);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = owner.hashCode();
+        result = 31 * result + postingTime.hashCode();
+        return result;
+    }
 }
