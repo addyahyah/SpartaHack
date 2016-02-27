@@ -5,7 +5,6 @@ import java.util.List;
 
 import framework.IPost;
 import framework.IReply;
-import framework.IUser;
 
 /**
  * Created by yangr on 2/27/2016.
@@ -23,7 +22,7 @@ public class Post implements IPost {
     private double reward;
     private Date postingTime;
     private List<IReply> replies;
-    private IUser seller;
+    private String sellerId;
 
     public Post(String postID){
         //? A post can retrieve information itself?
@@ -100,12 +99,12 @@ public class Post implements IPost {
         this.replies = replies;
     }
 
-    public IUser getSeller() {
-        return seller;
+    public String getSellerId() {
+        return sellerId;
     }
 
-    public void setSeller(IUser seller) {
-        this.seller = seller;
+    public void setSellerId(String seller) {
+        this.sellerId = seller;
     }
 
     public String getPostId() {

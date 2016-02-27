@@ -9,36 +9,28 @@ import java.util.List;
 public interface IPost {
     String getOwnerId();
 
-
     String getDescription();
 
-
     void setDescription(String subject);
-
 
     double getReward();
 
     void setReward(double reward);
 
-
-
     Date getPostingTime();
-
 
     void setPostingTime(Date postingTime);
 
-
     List<IReply> getReplies();
-
 
     void setReplies(List<IReply> replies);
 
+    String getSellerId();
 
-    IUser getSeller();
-
-    void setSeller(IUser seller);
+    void setSellerId(String sellerId);
 
     String getStatus();
+
     void setStatus(String status);
 
     public double getLongitude();
