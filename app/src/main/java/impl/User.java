@@ -19,9 +19,18 @@ public class User implements IUser {
     private List<IReview> reviews;
     private IRating Rating;
     private List<String> postListening;
+    private String email;
 
     public User(){
 
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String get_id() {

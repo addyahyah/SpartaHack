@@ -27,4 +27,8 @@ public interface IUser {
     void removeRating(int rating);
     List<String> getPostListening();
     void addPostListening(String postId);
+
+    public String getEmail();
+
+    public void setEmail(String email);
 }
