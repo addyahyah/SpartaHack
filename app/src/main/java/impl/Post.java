@@ -12,8 +12,10 @@ import framework.IUser;
  */
 public class Post implements IPost {
     private final int EXPIRATION_TIME = 3600; // in seconds which is 1 hour
+
     private String status;
-    private IUser owner;
+    private String postId;
+    private String ownerId;
     private String title;
     private double latitude;
     private double longitude;
@@ -62,12 +64,8 @@ public class Post implements IPost {
         this.status = status;
     }
 
-    public IUser getOwner() {
-        return owner;
-    }
-
-    public void setOwner(IUser owner) {
-        this.owner = owner;
+    public String getOwnerId() {
+        return ownerId;
     }
 
     public String getDescription() {
@@ -110,21 +108,32 @@ public class Post implements IPost {
         this.seller = seller;
     }
 
+    public String getPostId() {
+        return postId;
+    }
+
+    public void setPostId(String postId) {
+        this.postId = postId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         Post post = (Post) o;
-
-        if (!owner.equals(post.owner)) return false;
-        return postingTime.equals(post.postingTime);
+        if (!postId.equals(post.postId)) return false;
+        if (!ownerId.equals(post.ownerId)) return false;
+        if (!postingTime.equals(post.postingTime)) return false;
+        else
+            return true;
 
     }
 
     @Override
     public int hashCode() {
-        int result = owner.hashCode();
+        int result = postId.hashCode();
+        result = 31 * result + ownerId.hashCode();
         result = 31 * result + postingTime.hashCode();
         return result;
     }

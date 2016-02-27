@@ -7,10 +7,7 @@ import java.util.List;
  * Created by yangr on 2/27/2016.
  */
 public interface IPost {
-    IUser getOwner();
-
-
-    void setOwner(IUser owner);
+    String getOwnerId();
 
 
     String getDescription();
@@ -55,5 +52,9 @@ public interface IPost {
     public String getTitle();
 
     public void setTitle(String title);
+
+    public String getPostId();
+
+    public void setPostId(String postId);
 
 }
